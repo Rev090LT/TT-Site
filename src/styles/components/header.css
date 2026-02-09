@@ -1,0 +1,105 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-main);
+    padding: 0.8rem 0;          /* уменьшили отступы */
+    z-index: 1000;
+    transition: height 0.3s ease;
+    /* Добавь это — чтобы фон был "без разрывов" */
+    backdrop-filter: blur(0);   /* если хочешь эффект стекла позже */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;         /* важно! */
+}
+
+.logo {
+    font-family: var(--font-primary);  /* Bebas Neue */
+    font-size: 1.8rem;
+    color: var(--text-main);           /* #FFFFFF */
+    text-decoration: none;
+    letter-spacing: 1px;               /* Для агрессивного вида */
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: var(--text-accent);         /* #FF3300 */
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-list a {
+    color: var(--text-main);           /* #FFFFFF */
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--font-body);     /* Inter */
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--text-accent);         /* #FF3300 */
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* === ЛОГОТИП === */
+
+
+.logo-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;                 /* чтобы логотип был поверх всего */
+}
+
+.logo-img {
+    height: 52px;
+    margin-top: -2px; /* подтягиваем вверх, чтобы не вылезал */
+}
+
+.logo-link:hover .logo-img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .logo-img {
+        height: 36px;
+    }
+}

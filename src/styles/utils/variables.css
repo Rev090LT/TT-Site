@@ -1,0 +1,13 @@
+:root {
+    --bg-main: #000000;
+    --bg-panel: #111111;
+    --text-main: #FFFFFF;
+    --text-accent: #FF3300;
+    --text-secondary: #AAAAAA;
+
+    --font-primary: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --border-radius: 4px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

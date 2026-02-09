@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackTime Performance — тюнинг-ателье</title>
+
+    <!-- Подключаем шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+    <!-- Подключаем основной CSS -->
+    <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <a href="/" class="logo-link">
+                <img src="/assets/images/minilogo.jpg" alt="TrackTime Performance" class="logo-img" />
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#booking">Запись на ТО</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#cart">Корзина</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <img src="./assets/icons/menu.svg" alt="Меню" />
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slide active" style="background-image: url('/assets/images/slide-1.jpg')">
+            <div class="hero-content">
+                <h1 class="hero-title">ТЮНИНГ — ЭТО НЕ СТИЛЬ. ЭТО СОСТОЯНИЕ ДУХА</h1>
+                <p class="hero-subtitle">Чип-тюнинг, диагностика, кастомные выхлопы — всё под ключ.</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-primary">Каталог запчастей</a>
+                    <a href="#booking" class="btn btn-secondary">Записаться</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('/assets/images/slide-2.jpg')">
+            <div class="hero-content">
+                <h1 class="hero-title">ВЫХЛОПЫ, ТУРБИНЫ, ПОДВЕСКИ</h1>
+                <p class="hero-subtitle">Оригинал и аналоги от Garrett, HKS, GReddy, AEM и др.</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-primary">Смотреть товары</a>
+                    <a href="#services" class="btn btn-secondary">Услуги</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('/assets/images/slide-3.jpg')">
+            <div class="hero-content">
+                <h1 class="hero-title">ЗАПИШИТЕСЬ НА ТО ЗА 2 КЛИКА</h1>
+                <p class="hero-subtitle">От диагностики до полной сборки — мы готовы к любому вызову.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary">Забронировать время</a>
+                    <a href="#contacts" class="btn btn-secondary">Связаться</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Индикаторы -->
+        <div class="hero-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Что мы делаем</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🔧 Обслуживание и ТО</h3>
+                    <p>Чип-тюнинг, диагностика, ремонт двигателей, трансмиссий — всё под ключ.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚗 Автозапчасти</h3>
+                    <p>Оригинал и аналоги от мировых брендов. Доставка по РФ и СНГ.</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚙️ Кастомизация</h3>
+                    <p>Аэродинамика, выхлопы, подвески, LED-оптика — по вашему запросу.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TrackTime Performance. Все права защищены. Не для слабых двигателей.</p>
+            <p>📍 Тюмень, ул. Сайдашева, 14</p>
+            <p>📞 +7 (982) 968-07-78</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

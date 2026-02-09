@@ -1,0 +1,6 @@
+@import url('./utils/reset.css');
+@import url('./utils/variables.css');
+@import url('./components/header.css');
+@import url('./components/hero.css');
+@import url('./components/cards.css');
+@import url('./components/footer.css');
