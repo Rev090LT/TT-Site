@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
+    <!-- Контейнер для модальных окон -->
+    <div id="modal-root"></div>
 
     <!-- Header -->
     <header id="header" class="header">
@@ -23,7 +25,7 @@
                 <ul class="nav-list">
                     <li><a href="#catalog">Каталог</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#booking">Запись на ТО</a></li>
+                    <li><a href="#booking" id="openBookingModal">Запись на ТО</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                     <li><a href="#cart">Корзина</a></li>
                 </ul>
@@ -37,11 +39,11 @@
     <section class="hero">
         <div class="hero-slide active" style="background-image: url('/assets/images/slide-1.jpg')">
             <div class="hero-content">
-                <h1 class="hero-title">ТЮНИНГ — ЭТО НЕ СТИЛЬ. ЭТО СОСТОЯНИЕ ДУХА</h1>
+                <h1 class="hero-title">GO LIKE HELL</h1>
                 <p class="hero-subtitle">Чип-тюнинг, диагностика, кастомные выхлопы — всё под ключ.</p>
                 <div class="hero-buttons">
                     <a href="#catalog" class="btn btn-primary">Каталог запчастей</a>
-                    <a href="#booking" class="btn btn-secondary">Записаться</a>
+                    <a href="#booking" class="btn btn-secondary" id="openBookingModalHero">Записаться</a>
                 </div>
             </div>
         </div>
@@ -65,7 +67,6 @@
                 </div>
             </div>
         </div>
-        
 
         <!-- Индикаторы -->
         <div class="hero-dots">
@@ -92,7 +93,6 @@
                     <h3>⚙️ Кастомизация</h3>
                     <p>Аэродинамика, выхлопы, подвески, LED-оптика — по вашему запросу.</p>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -100,7 +100,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 TrackTime Performance. Все права защищены. Не для слабых двигателей.</p>
+            <p>&copy; 2026 TrackTime Performance. Все права защищены.</p>
             <p>📍 Тюмень, ул. Сайдашева, 14</p>
             <p>📞 +7 (982) 968-07-78</p>
         </div>

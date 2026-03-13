@@ -4,3 +4,13 @@
 @import url('./components/hero.css');
 @import url('./components/cards.css');
 @import url('./components/footer.css');
+@import url('./components/modal.css'); 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

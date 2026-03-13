@@ -5,9 +5,6 @@
     background-color: var(--bg-main);
     padding: 0.8rem 0;          /* уменьшили отступы */
     z-index: 1000;
-    transition: height 0.3s ease;
-    /* Добавь это — чтобы фон был "без разрывов" */
-    backdrop-filter: blur(0);   /* если хочешь эффект стекла позже */
 }
 
 .container {

@@ -1,0 +1,54 @@
+<div class="modal-window" id="bookingModal" style="display: none;">
+    <div class="modal-window">
+        <div">
+            <h2>Запись на техобслуживание</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="clientName">Ваше имя *</label>
+                    <input type="text" id="clientName" name="clientName" placeholder="Введите имя" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX" required />
+                </div>
+                <div class="form-group">
+                    <label for="carModel">Модель автомобиля</label>
+                    <input type="text" id="carModel" name="carModel" placeholder="Например: Toyota Camry" />
+                </div>
+                <div class="form-group">
+                    <label for="vinNumber">VIN номер</label>
+                    <input type="text" id="vinNumber" name="vinNumber" placeholder="Введите VIN" maxlength="17" />
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Тип услуги *</label>
+                    <select id="serviceType" name="serviceType" required>
+                        <option value="">Выберите услугу</option>
+                        <option value="diagnostics">Диагностика</option>
+                        <option value="chipTuning">Чип-тюнинг</option>
+                        <option value="oilChange">Замена масла</option>
+                        <option value="tuneUp">Техническое обслуживание</option>
+                        <option value="brakeService">Замена тормозов</option>
+                        <option value="suspension">Подвеска</option>
+                        <option value="custom">Кастомная работа</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата визита *</label>
+                    <input type="date" id="date" name="date" required />
+                </div>
+                <div class="form-group">
+                    <label for="time">Время визита *</label>
+                    <input type="time" id="time" name="time" required />
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" rows="3" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
