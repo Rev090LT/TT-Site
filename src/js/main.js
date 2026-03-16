@@ -1,6 +1,6 @@
 // src/js/main.js
 import Swiper from 'swiper';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -8,11 +8,13 @@ import './components/mobile-menu.js';
 import './utils/animations.js';
 import bookingModalHTML from '../html/booking-modal.html?raw';
 
+// === Регистрируем модули ===
+Swiper.use([Autoplay, Pagination, Navigation]);
+
 // === ОСТАВЬ ТОЛЬКО ОДИН DOMContentLoaded ===
 document.addEventListener('DOMContentLoaded', () => {
     // === ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРА ВНУТРИ ===
     const heroSwiper = new Swiper('.hero-swiper', {
-        modules: [Pagination, Navigation],
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         speed: 800,
         autoplay: {
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false,
         },
         effect: 'fade',
@@ -37,16 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modal-root').innerHTML = bookingModalHTML;
     initModal();
 });
-
-// === УДАЛИ ВТОРОЙ DOMContentLoaded ===
-/*
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const response = await fetch(...);
-        ...
-    } catch (err) { ... }
-});
-*/
 
 function initModal() {
     const openBtn1 = document.getElementById('openBookingModal');
