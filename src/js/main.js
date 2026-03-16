@@ -8,36 +8,45 @@ import './components/mobile-menu.js';
 import './utils/animations.js';
 import bookingModalHTML from '../html/booking-modal.html?raw';
 
-// Инициализируем слайдер
-const heroSwiper = new Swiper('.hero-swiper', {
-    modules: [Pagination, Navigation],
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    speed: 800,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true,
-    },
-});
-
-// === ОСТАВЬ ТОЛЬКО ОДИН ===
+// === ОСТАВЬ ТОЛЬКО ОДИН DOMContentLoaded ===
 document.addEventListener('DOMContentLoaded', () => {
+    // === ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРА ВНУТРИ ===
+    const heroSwiper = new Swiper('.hero-swiper', {
+        modules: [Pagination, Navigation],
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        speed: 800,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+    });
+
+    // === ВСТАВКА МОДАЛКИ ===
     document.getElementById('modal-root').innerHTML = bookingModalHTML;
     initModal();
 });
 
-// === УДАЛИ ВТОРОЙ ===
+// === УДАЛИ ВТОРОЙ DOMContentLoaded ===
+/*
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch(...);
+        ...
+    } catch (err) { ... }
+});
+*/
 
 function initModal() {
     const openBtn1 = document.getElementById('openBookingModal');
@@ -79,33 +88,12 @@ function initModal() {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
 
-    form?.addEventListener('submit', async (e) => {
+    form?.addEventListener('submit', (e) => {
         e.preventDefault();
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
         console.log('Данные формы:', data);
-
-        try {
-            // === ОТПРАВКА НА BACKEND ===
-            const response = await fetch('http://localhost:3000/api/bookings', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                alert('Заявка успешно отправлена в Telegram!');
-            } else {
-                console.error('Ошибка бэкенда:', result.error);
-                alert('Ошибка: ' + result.error);
-            }
-        } catch (err) {
-            console.error('Ошибка отправки:', err);
-            alert('Не удалось отправить заявку');
-        }
-
+        alert('Заявка успешно отправлена!');
         form.reset();
         closeModal();
     });

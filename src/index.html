@@ -36,43 +36,49 @@
         </div>
     </header>
 
+    <!-- Hero (с Swiper) -->
     <section class="hero">
-        <div class="hero-slide active" style="background-image: url('/assets/images/slide-1.jpg')">
-            <div class="hero-content">
-                <h1 class="hero-title">GO LIKE HELL</h1>
-                <p class="hero-subtitle">Чип-тюнинг, диагностика, кастомные выхлопы — всё под ключ.</p>
-                <div class="hero-buttons">
-                    <a href="#catalog" class="btn btn-primary">Каталог запчастей</a>
-                    <a href="#booking" class="btn btn-secondary" id="openBookingModalHero">Записаться</a>
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Слайд 1 -->
+                <div class="swiper-slide" style="background-image: url('/assets/images/slide-1.jpg'); background-size: cover; background-position: center;">
+                    <div class="hero-content">
+                        <h1 class="hero-title">GO LIKE HELL</h1>
+                        <p class="hero-subtitle">Чип-тюнинг, диагностика, кастомные выхлопы — всё под ключ.</p>
+                        <div class="hero-buttons">
+                            <a href="#catalog" class="btn btn-primary">Каталог запчастей</a>
+                            <a href="#booking" class="btn btn-secondary" id="openBookingModalHero">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Слайд 2 -->
+                <div class="swiper-slide" style="background-image: url('/assets/images/slide-2.jpg'); background-size: cover; background-position: center;">
+                    <div class="hero-content">
+                        <h1 class="hero-title">ВЫХЛОПЫ, ТУРБИНЫ, ПОДВЕСКИ</h1>
+                        <p class="hero-subtitle">Оригинал и аналоги от Garrett, HKS, GReddy, AEM и др.</p>
+                        <div class="hero-buttons">
+                            <a href="#catalog" class="btn btn-primary">Смотреть товары</a>
+                            <a href="#services" class="btn btn-secondary">Услуги</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Слайд 3 -->
+                <div class="swiper-slide" style="background-image: url('/assets/images/slide-3.jpg'); background-size: cover; background-position: center;">
+                    <div class="hero-content">
+                        <h1 class="hero-title">ЗАПИШИТЕСЬ НА ТО ЗА 2 КЛИКА</h1>
+                        <p class="hero-subtitle">От диагностики до полной сборки — мы готовы к любому вызову.</p>
+                        <div class="hero-buttons">
+                            <a href="#booking" class="btn btn-primary" id="openBookingModalHero">Забронировать время</a>
+                            <a href="#contacts" class="btn btn-secondary">Связаться</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('/assets/images/slide-2.jpg')">
-            <div class="hero-content">
-                <h1 class="hero-title">ВЫХЛОПЫ, ТУРБИНЫ, ПОДВЕСКИ</h1>
-                <p class="hero-subtitle">Оригинал и аналоги от Garrett, HKS, GReddy, AEM и др.</p>
-                <div class="hero-buttons">
-                    <a href="#catalog" class="btn btn-primary">Смотреть товары</a>
-                    <a href="#services" class="btn btn-secondary">Услуги</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('/assets/images/slide-3.jpg')">
-            <div class="hero-content">
-                <h1 class="hero-title">ЗАПИШИТЕСЬ НА ТО ЗА 2 КЛИКА</h1>
-                <p class="hero-subtitle">От диагностики до полной сборки — мы готовы к любому вызову.</p>
-                <div class="hero-buttons">
-                    <a href="#booking" class="btn btn-primary">Забронировать время</a>
-                    <a href="#contacts" class="btn btn-secondary">Связаться</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Индикаторы -->
-        <div class="hero-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
+            <!-- Пагинация (точки) -->
+            <div class="swiper-pagination"></div>
+            <!-- Кнопки навигации -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
@@ -83,7 +89,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <h3>🔧 Обслуживание и ТО</h3>
-                    <p>Чип-тюнинг, диагностика, ремонт двигателей, трансмиссий — всё под ключ.</p>
+                    <p>Осмотр, диагностика, ремонт двигателей и трансмиссий — всё под ключ.</p>
                 </div>
                 <div class="service-card">
                     <h3>🚗 Автозапчасти</h3>
