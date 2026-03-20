@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="./styles/components/services.css" />
 </head>
 <body>
+    <!-- Контейнер для модальных окон -->
+    <div id="modal-root"></div>
+
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
@@ -26,7 +29,7 @@
                     <li><a href="/">Главная</a></li>
                     <li><a href="/#catalog">Каталог</a></li>
                     <li><a href="/#booking" id="openBookingModal">Запись на ТО</a></li>
-                    <li><a href="/services.html">Услуги</a></li>
+                    <li><a href="./services.html">Услуги</a></li>
                     <li><a href="/#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -42,90 +45,96 @@
             <h1>Наши услуги</h1>
             <p class="services-intro">Профессиональное обслуживание, диагностика и уход за автомобилем по выгодным ценам.</p>
 
-            <!-- Блок Техобслуживание -->
-            <div class="service-category">
-                <h2>🔧 Техобслуживание</h2>
-                <!-- === ИСПРАВЛЕНО: класс изменён === -->
-                <div class="service-grid-custom">
-                    <div class="service-offering-card">
-                        <h3>Замена масла</h3>
-                        <p>С заменой фильтров</p>
-                        <div class="service-price">от 1 500 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Замена тормозных колодок</h3>
-                        <p>Передние / задние</p>
-                        <div class="service-price">от 2 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Диагностика двигателя</h3>
-                        <p>Компьютерная диагностика</p>
-                        <div class="service-price">от 1 200 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Замена свечей</h3>
-                        <p>Комплексная замена</p>
-                        <div class="service-price">от 1 800 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Чип-тюнинг</h3>
-                        <p>Прошивка ЭБУ</p>
-                        <div class="service-price">от 8 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Развал-схождение</h3>
-                        <p>3D-стенд, регулировка</p>
-                        <div class="service-price">от 2 500 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
+            <!-- Контейнер для двух колонок -->
+            <div class="services-two-column">
+                
+                <!-- Левая колонка - Техобслуживание -->
+                <div class="service-column">
+                    <div class="service-category">
+                        <h2>🔧 Техобслуживание</h2>
+                        <div class="service-grid-custom">
+                            <div class="service-offering-card">
+                                <h3>Замена масла</h3>
+                                <p>С заменой фильтров</p>
+                                <div class="service-price">от 1 500 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Замена тормозных колодок</h3>
+                                <p>Передние / задние</p>
+                                <div class="service-price">от 2 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Диагностика двигателя</h3>
+                                <p>Компьютерная диагностика</p>
+                                <div class="service-price">от 1 200 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Замена свечей</h3>
+                                <p>Комплексная замена</p>
+                                <div class="service-price">от 1 800 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Чип-тюнинг</h3>
+                                <p>Прошивка ЭБУ</p>
+                                <div class="service-price">от 8 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Развал-схождение</h3>
+                                <p>3D-стенд, регулировка</p>
+                                <div class="service-price">от 2 500 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Блок Детейлинг -->
-            <div class="service-category">
-                <h2>🚗 Детейлинг</h2>
-                <!-- === ИСПРАВЛЕНО: класс изменён === -->
-                <div class="service-grid-custom">
-                    <div class="service-offering-card">
-                        <h3>Химчистка салона</h3>
-                        <p>Обивка, ковры, потолок</p>
-                        <div class="service-price">от 3 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Полировка кузова</h3>
-                        <p>Удаление царапин, восстановление блеска</p>
-                        <div class="service-price">от 5 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Нанесение керамики</h3>
-                        <p>Защита ЛКП на 1-2 года</p>
-                        <div class="service-price">от 15 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Обработка фар</h3>
-                        <p>Полировка, защита</p>
-                        <div class="service-price">от 1 500 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Консервация автомобиля</h3>
-                        <p>Для длительного хранения</p>
-                        <div class="service-price">от 8 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
-                    </div>
-                    <div class="service-offering-card">
-                        <h3>Уход за кожей</h3>
-                        <p>Омоложение, защита салона</p>
-                        <div class="service-price">от 2 000 ₽</div>
-                        <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                <!-- Правая колонка - Детейлинг -->
+                <div class="service-column">
+                    <div class="service-category">
+                        <h2>🚗 Детейлинг</h2>
+                        <div class="service-grid-custom">
+                            <div class="service-offering-card">
+                                <h3>Химчистка салона</h3>
+                                <p>Обивка, ковры, потолок</p>
+                                <div class="service-price">от 3 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Полировка кузова</h3>
+                                <p>Удаление царапин, восстановление блеска</p>
+                                <div class="service-price">от 5 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Нанесение керамики</h3>
+                                <p>Защита ЛКП на 1-2 года</p>
+                                <div class="service-price">от 15 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Обработка фар</h3>
+                                <p>Полировка, защита</p>
+                                <div class="service-price">от 1 500 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Консервация автомобиля</h3>
+                                <p>Для длительного хранения</p>
+                                <div class="service-price">от 8 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                            <div class="service-offering-card">
+                                <h3>Уход за кожей</h3>
+                                <p>Омоложение, защита салона</p>
+                                <div class="service-price">от 2 000 ₽</div>
+                                <a href="/#booking" class="btn btn-secondary">Записаться</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,16 @@
 /* Страница услуг */
 .services-page {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem;
     background: var(--bg-main);
     min-height: 100vh;
+    position: relative;
 }
 
 .services-page .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    position: relative;
 }
 
 .services-page h1 {
@@ -21,14 +23,55 @@
 }
 
 .services-intro {
-    text-align: center: 1.2rem;
+    text-align: center;
+    font-size: 1.2rem;
     color: var(--text-secondary);
     margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Контейнер для двух колонок — фиксируем позицию */
+.services-two-column {
+    position: relative;
+    min-height: 650px; /* чтобы видно было разделение */
+}
+
+/* Левая колонка — прижата к левому краю */
+.service-column.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(50% - 180px); /* 50% минус половина отступа между колонками */
+    max-width: 500px;
+}
+
+/* Правая колонка — прижата к правому краю */
+.service-column.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(50% - 180px);
+    max-width: 500px;
+}
+
+/* Заголовки — выравнивание по краям */
+.service-column.left h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.service-column.right h2 {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Категория услуг */
 .service-category {
-    margin-bottom: 4rem;
+    margin-bottom: 0;
 }
 
 .service-category h2 {
@@ -37,13 +80,13 @@
     margin-bottom: 2rem;
     color: var(--text-accent);
     border-bottom: 2px solid var(--text-accent);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
 }
 
-/* === ИСПРАВЛЕНО: новый класс === */
+/* Сетка услуг — теперь вертикальный список в каждой колонке */
 .service-grid-custom {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -52,10 +95,14 @@
     background: var(--card-bg);
     border-radius: var(--border-radius);
     padding: 2rem;
-    text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid var(--border-color, #ddd);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    width: 100%;
 }
 
 .service-offering-card:hover {
@@ -69,17 +116,19 @@
     margin-bottom: 0.5rem;
     color: var(--text-main);
     margin-top: 0;
+    flex-grow: 1;
 }
 
 .service-offering-card p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     font-size: 1rem;
+    line-height: 1.5;
 }
 
 .service-price {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-accent);
     margin-bottom: 1.5rem;
 }
@@ -96,6 +145,12 @@
     font-weight: 600;
     transition: transform 0.3s, box-shadow 0.3s;
     border: 2px solid transparent;
+    align-self: center;
+    margin-top: auto;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-offering-card .btn:hover {
@@ -113,4 +168,67 @@
     background-color: var(--text-accent);
     border: 2px solid var(--text-accent);
     color: var(--bg-main);
+}
+
+/* Адаптивность — на мобильных устройствах */
+@media (max-width: 900px) {
+    .services-two-column {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .service-column.left,
+    .service-column.right {
+        position: static;
+        width: 100%;
+        max-width: none;
+    }
+
+    .service-column.left h2,
+    .service-column.right h2 {
+        text-align: center;
+    }
+
+    .services-page h1 {
+        font-size: 2rem;
+    }
+
+    .services-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .service-category h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-grid-custom {
+        gap: 1.8rem;
+    }
+
+    .service-offering-card {
+        min-height: auto;
+        padding: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-page {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .services-page .container {
+        padding: 0 1rem;
+    }
+
+    .service-category h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-offering-card {
+        padding: 1.3rem;
+    }
 }
